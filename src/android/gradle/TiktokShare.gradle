@@ -1,0 +1,9 @@
+//gradle文件中添加：
+repositories {
+    maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
+}
+
+dependencies {
+    implementation 'com.bytedance.ies.ugc.aweme:opensdk-china-external:0.1.9.6'
+    implementation 'com.bytedance.ies.ugc.aweme:opensdk-common:0.1.9.6'
+}

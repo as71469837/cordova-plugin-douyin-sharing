@@ -1,0 +1,29 @@
+{
+  "name": "huayu.cordova.plugin.share.douyin",
+  "version": "1.0.0",
+  "description": "抖音分享与发布",
+  "cordova": {
+    "id": "huayu-cordova-plugin-share-douyin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as71469837/cordova-plugin-share-douyin.git"
+  },
+  "author": "DaSheng",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/as71469837/cordova-plugin-share-douyin/issues"
+  },
+  "homepage": "https://github.com/as71469837/cordova-plugin-share-douyin#readme"
+}

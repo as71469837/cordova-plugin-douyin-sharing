@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="huayu-cordova-plugin-share-douyin" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>TiktokShare</name>
+    <js-module name="tiktokShare" src="www/tiktokShare.js">
+        <clobbers target="tiktokShare" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="TiktokShare">
+                <param name="android-package" value="huayu.cordova.plugin.share.douyin.TiktokShare" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:name="huayu.cordova.plugin.share.douyin.AuthResponseActivity"
+                android:launchMode="singleTask"
+                android:exported="true">
+            </activity>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml">
+
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+            <queries>
+                <!--允许查询抖音和抖音极速版的软件包信息-->
+                <package android:name="com.ss.android.ugc.aweme" />
+                <package android:name="com.ss.android.ugc.aweme.lite" />
+            </queries>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/TiktokShare.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+        <source-file src="src/android/tiktokSharing/Options.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+        <source-file src="src/android/tiktokSharing/AuthResponseActivity.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+        <source-file src="src/android/tiktokSharing/UriUtil.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+        <source-file src="src/android/tiktokSharing/SharingRequest.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+        <source-file src="src/android/tiktokSharing/SharingResponse.java"
+            target-dir="src/huayu/cordova/plugin/share/douyin" />
+
+        <framework src="src/android/gradle/TiktokShare.gradle" custom="true" type="gradleReference" />
+    </platform>
+</plugin>
